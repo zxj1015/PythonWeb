@@ -3,20 +3,27 @@ PythonWeb
 
 The webpage for python
 
-book
+book:
   contains books.
-homework
+
+homework:
   contains homework upload and download.
-information
+
+information:
   contains the information of users.
-log
+
+log:
   contains log file.
-picture
+
+picture:
   contains the pictures used in this web.
-slides
+
+slides:
   contains the slides given by teacher.
-software
+
+software:
   contains some software used in this website.
-source
+
+source:
   contains the source code.
    
