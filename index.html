@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<title>
+Python Website
+</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="software/bootstrap-3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="software/bootstrap-3.2.0/css/bootstrap-theme.min.css">
+  
+  <script src="software/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <form  name="myfrom" id="myform" method="get" action="b.php">
+	<input type="text" name="user_no" value="222" />
+	<input type="text" name="user_name" value="111" />
+	<input type="text" name="user_mail" value="111" />
+	<input type="text" name="user_phone" value="111" />
+
+  <button class="btn btn-primary" onclick="test()"style="margin-left:10px">Submit</button>
+  <button class="btn btn-primary" style="margin-left:10px">LinkTo</button>
+  </form>
+  <script>
+    function test()
+    {
+      document.getElementById("myform").submit();    
+      alert(11);
+    }
+  </script>
+<body>
