@@ -11,22 +11,14 @@ Python Website
   <link rel="stylesheet" href="software/bootstrap-3.2.0/css/bootstrap-theme.min.css">
   
   <script src="software/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+  <script src="source/js/index.js"></script>
 </head>
 <body>
-  <form  name="myfrom" id="myform" method="get" action="b.php">
-	<input type="text" name="user_no" value="222" />
-	<input type="text" name="user_name" value="111" />
-	<input type="text" name="user_mail" value="111" />
-	<input type="text" name="user_phone" value="111" />
-
-  <button class="btn btn-primary" onclick="test()"style="margin-left:10px">Submit</button>
-  <button class="btn btn-primary" style="margin-left:10px">LinkTo</button>
+  <form  name="login_form" id="login_form" method="post" action="source/html/login.php">
+	<input type="text" name="login_user_no" value="1130339070" />
+	<input type="text" name="login_user_pwd" value="xcv12345" />
   </form>
-  <script>
-    function test()
-    {
-      document.getElementById("myform").submit();    
-      alert(11);
-    }
-  </script>
+  <button class="btn btn-primary" onclick="submit_login_info()" style="margin-left:10px">Login</button>
+  <button class="btn btn-primary" onclick="submit_register_info()" style="margin-left:10px">Register</button>
+
 <body>

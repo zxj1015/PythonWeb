@@ -1,0 +1,8 @@
+userinfo
+  student_no: 整数
+  student_name: string
+  student_pwd: string
+  student_email: string
+  student_phone: string
+  student_power: 1 [for stduent], 2 for teacher
+
