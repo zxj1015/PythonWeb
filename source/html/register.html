@@ -6,20 +6,21 @@ Python Website
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="software/bootstrap-3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="software/bootstrap-3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../software/bootstrap-3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../software/bootstrap-3.2.0/css/bootstrap-theme.min.css">
   
-  <script src="software/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+  <script src="../../software/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+  <script src="../js/checkdata.js"></script>
   <script src="../js/register.js"></script>
 </head>
 <body>
-  <form  name="myfrom" id="myform" method="get" action="register.php">
-	<input type="text" name="user_id" value="1130339080" />
-	<input type="text" name="user_name" value="好大厂" />
-	<input type="text" name="user_pwd" value="12345" />
-	<input type="text" name="user_pwd2" value="12345" />
-	<input type="text" name="user_mail" value="zha@gmail.com" />
-	<input type="text" name="user_phone" value="15800917568" />
+  <form  name="register_from" id="register_form" method="post" action="register.php">
+	<input type="text" id="user_id" name="user_id" value="1130339080" />
+	<input type="text" id="user_name" name="user_name" value="好大厂" />
+	<input type="text" id="user_pwd" name="user_pwd" value="12345" />
+	<input type="text" id="user_pwd2" name="user_pwd2" value="12345" />
+	<input type="text" id="user_mail" name="user_mail" value="zha@gmail.com" />
+	<input type="text" id="user_phone" name="user_phone" value="15800917568" />
   </form>
   <button class="btn btn-primary" onclick="submit_register_info()" style="margin-left:10px">Submit</button>
 
