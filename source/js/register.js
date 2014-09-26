@@ -6,6 +6,7 @@ function CheckRegisterInfo() {
   user_mail=$("#user_mail").val();
   user_phone=$("#user_phone").val();
   if (isNull(user_id) || isNull(user_name) || isNull(user_pwd) || isNull(user_pwd2) || isNull(user_mail) || isNull(user_phone)) {
+    alert("每一个字段都不能为空");
     return false;
   }
   if (!checkStudentNumber(user_id)) {

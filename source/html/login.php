@@ -14,7 +14,8 @@ while (!feof($file))
 }
 fclose($file);
 if($valid_user == true) {
-  echo "<script>location.href='mainpage.html';</script>";
+  setcookie("python_web_student_number",$login_user_id, time()+3600);
+  echo "<script>location.href='mainpage.php';</script>";
 } else {
   echo "<script>location.href='../../index.html';</script>";
 }

@@ -21,7 +21,6 @@ function CheckLoginData() {
 // submit button is clicked.
 function submit_login_info() {
   if(CheckLoginData()) {
-    alert("send to server");
     document.getElementById("login_form").submit();
   }
 }
