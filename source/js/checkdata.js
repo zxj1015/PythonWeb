@@ -62,5 +62,8 @@ function checkPassward(str) {
   if (str.length > 50) {
     return false;
   }
+  if (str.length < 6) {
+    return false;
+  }
   return true;
 }

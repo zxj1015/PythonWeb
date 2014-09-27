@@ -26,11 +26,16 @@ function UploadFile(id) {
       alert("Please select a file to upload");
       return ;
     }
-    suffix_list=filename.split(".");
-    suffix=suffix_list[suffix_list.length-1];
-    if (suffix!="pdf" && suffix!="py" && suffix!="zip") {
-      alert("Upsupported file type. Only .pdf, .py, .zip can be uploaded");
+    suffix=getSuffix(filename);
+    basename=getBasename(filename);
+    if (suffix!="zip") {
+      alert("Upsupported file type. Only .zip file can be uploaded");
       return;
+    }
+    student_no=getCookie("python_web_student_number");
+    if(basename!=student_no) {
+      alert("请把文件重命名为: "+student_no+"."+suffix);
+      return ;
     }
     $("#upload_homework_id").val(homework_id);
     document.getElementById("upload_homework_form").submit();
@@ -78,8 +83,28 @@ function DownLoadBook(obj) {
   DownLoadFile("../../book/python_hexin.pdf");
 }
 
-function DownLoadHomeWork() {
-  alert("Not Finished");
+function DownLoadHomeWork(id) {
+
+  homework_id="";
+  obj_list=$(".homework_list_item");
+  for (i=0;i<obj_list.length;++i) {
+    	if(obj_list[i].style.background!="rgb(255, 255, 255)") {
+    	  homework_id=obj_list[i].id.split("_")[0];
+    	  break;
+    	}
+  }
+  if (homework_id=="") {
+      alert("This homework is not started");
+      return ;
+  }
+  student_no=getCookie("python_web_student_number");
+  //alert('../../homework/'+homework_id+"/"+student_no+".zip");
+  if (id=="download_my_homework") {
+    window.location.href = '../../homework/'+homework_id+"/"+student_no+".zip";
+  }
+  if (id=="download_standard_homework") {
+    window.location.href = '../../homework/'+homework_id+"/"+"standard_result.zip";
+  }
 }
 
 

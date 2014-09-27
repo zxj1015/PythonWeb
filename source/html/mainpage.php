@@ -18,6 +18,7 @@ Python Website <?php echo $student_number ?>
   <link rel="stylesheet" href="../../software/bootstrap-3.2.0/css/bootstrap-theme.min.css">
   
   <script src="../../software/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+  <script src="../js/util.js"></script>
   <script src="../js/mainpage.js"></script>
 </head>
 <body>
@@ -120,8 +121,8 @@ Python Website <?php echo $student_number ?>
         <button onclick="UploadFile(this.id)" id="upload_homework_btn" class="btn btn-primary" style="margin-left:10px">Upload File</button>
       </div>
 	  <div style="margin-top:30px;padding-left:100px;padding-right:100px">
-        <button class="btn btn-primary" style="margin-left:20px">Download My Homework</button>
-        <button class="btn btn-primary" style="margin-left:20px">Download Standard Result</button>
+        <button id="download_my_homework" onclick="DownLoadHomeWork(this.id)" class="btn btn-primary" style="margin-left:20px">Download My Homework</button>
+        <button id="download_standard_homework" onclick="DownLoadHomeWork(this.id)" class="btn btn-primary" style="margin-left:20px">Download Standard Result</button>
 	  </div>
     </div>
   </div>
@@ -163,7 +164,7 @@ Python Website <?php echo $student_number ?>
         <tbody>
           <tr>
             <td>阮娜</td>
-            <td>nnn@gmail.com</td>
+            <td>naruan@cs.sjtu.edu.cn</td>
             <td>15021561683</td>
             <td>电信群楼3号楼527</td>
           </tr>

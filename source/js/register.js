@@ -18,7 +18,7 @@ function CheckRegisterInfo() {
     return false;
   }
   if (!checkPassward(user_pwd)) {
-    alert("Password format is not right, can't contain empty words and must be less than 50");
+    alert("密码格式不正确，不能包含空白字符，密码长度不少于6个字符，不多于50个字符");
     return false;
   }
   if (!checkEmail(user_mail)) {

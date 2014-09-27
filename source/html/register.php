@@ -6,6 +6,8 @@ $reg_user_mail=$_POST["user_mail"];
 $reg_user_phone=$_POST["user_phone"];
 
 $file = fopen('../../information/userinfo.txt', 'r') or exit("Unable to open file!");
+flock($file, LOCK_SH) or die("lock error");
+
 $has_registered_user=false;
 
 while (!feof($file)) 
@@ -17,13 +19,17 @@ while (!feof($file))
 	break;
   }
 }
+flock($file, LOCK_UN);
 fclose($file);
 if($has_registered_user == false){
   $new_user_info="\n".$reg_user_id."\t".$reg_user_name."\t".$reg_user_pwd."\t".$reg_user_mail."\t".$reg_user_phone."\t"."1";
-  $file = fopen('../../information/userinfo.txt', 'a') or exit("Unable to open file!");
-  fputs($file, $new_user_info);
-  fclose($file);
+  $file2 = fopen('../../information/userinfo.txt', 'a') or exit("Unable to open file!");
+  flock($file2, LOCK_EX) or die("lock error");
+  fputs($file2, $new_user_info);
+  flock($file2, LOCK_UN);
+  fclose($file2);
 }
+
 ?>
 
 <html>
